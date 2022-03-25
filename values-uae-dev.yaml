@@ -1,19 +1,21 @@
-jobManager:
-  replicas: 1
-  resource:
-    memory: "512m"
-    cpu: 0.25
-taskManager:
-  resource:
-    memory: "1024m"
-    cpu: 0.25
+global:
+  jobManager:
+    replicas: 1
+    resource:
+      memory: "512m"
+      cpu: 0.25
+  taskManager:
+    numberOfTaskSlots: "1"
+    resource:
+      memory: "1024m"
+      cpu: 0.25
 
-job:
-    jarURI: local:///opt/flink/usrlib/beam-app-bundled-1.0.0.jar
-    entryClass: org.example.kafkaoffset.MultipleKafkaOperatorsApp
-    args: 
-      -kafkaBrokers:kafka-cp-kafka.kafka.svc.cluster.local:9092
-    parallelism: 1
-    upgradeMode: stateless
-    state: running
-    savepointTriggerNonce: 0
+  job:
+      jarURI: local:///opt/flink/usrlib/beam-app-bundled-1.0.0.jar
+      entryClass: org.example.kafkaoffset.MultipleKafkaOperatorsApp
+      args: 
+        -kafkaBrokers:kafka-cp-kafka.kafka.svc.cluster.local:9092
+      parallelism: 1
+      upgradeMode: stateless
+      state: running
+      savepointTriggerNonce: 0
