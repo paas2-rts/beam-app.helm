@@ -2,11 +2,11 @@ jobManager:
   replicas: 1
   resource:
     memory: "512m"
-    cpu: "250m"
+    cpu: 0.25
 taskManager:
   resource:
     memory: "1024m"
-    cpu: "250m"
+    cpu: 0.25
 
 job:
     jarURI: local:///opt/flink/usrlib/beam-app-bundled-1.0.0.jar
