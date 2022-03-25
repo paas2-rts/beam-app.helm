@@ -1,4 +1,5 @@
 global:
+  flinkVersion: v1_14
   jobManager:
     replicas: 1
     resource:
