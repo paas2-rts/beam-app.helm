@@ -3,12 +3,12 @@ global:
   jobManager:
     replicas: 1
     resource:
-      memory: "512m"
+      memory: "1024m"
       cpu: 0.25
   taskManager:
     numberOfTaskSlots: "1"
     resource:
-      memory: "1024m"
+      memory: "2048m"
       cpu: 0.25
 
   job:
