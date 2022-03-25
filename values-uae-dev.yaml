@@ -1,6 +1,6 @@
 global:
   flinkVersion: v1_14
-  image: gimral/beam-app:1.0.2
+  image: gimral/beam-app:1.0.3
   jobManager:
     replicas: 1
     resource:
