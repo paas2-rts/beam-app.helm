@@ -14,11 +14,12 @@ global:
 
   job:
       jarURI: local:///opt/flink/usrlib/beam-app-bundled-1.0.0.jar
-      entryClass: org.example.kafkaoffset.MultipleKafkaOperatorsApp
+      entryClass: org.example.kafkaoffset.NoKafkaOperatorApp
       args: 
         - --runner=FlinkRunner
         - --kafkaBrokers=kafka-cp-kafka.kafka.svc.cluster.local:9092
+        - --checkpointingInterval=10000
       parallelism: 1
-      upgradeMode: stateless
+      upgradeMode: savepoint
       state: running
       savepointTriggerNonce: 0
