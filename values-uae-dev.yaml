@@ -16,7 +16,7 @@ global:
       jarURI: local:///opt/flink/usrlib/beam-app-bundled-1.0.0.jar
       entryClass: org.example.kafkaoffset.MultipleKafkaOperatorsApp
       args: 
-        - kafkaBrokers:kafka-cp-kafka.kafka.svc.cluster.local:9092
+        - --kafkaBrokers:kafka-cp-kafka.kafka.svc.cluster.local:9092
       parallelism: 1
       upgradeMode: stateless
       state: running
