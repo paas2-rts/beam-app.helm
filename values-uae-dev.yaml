@@ -1,4 +1,5 @@
 global:
+  deploymentVersion: 2
   flinkVersion: v1_14
   image: gimral/beam-app:1.0.4
   jobManager:
@@ -15,6 +16,7 @@ global:
   job:
       jarURI: local:///opt/flink/usrlib/beam-app-bundled-1.0.0.jar
       entryClass: org.example.kafkaoffset.NoKafkaOperatorApp
+      #fasterCopy needs to be set in the application
       args: 
         - --runner=FlinkRunner
         - --kafkaBrokers=kafka-cp-kafka.kafka.svc.cluster.local:9092
