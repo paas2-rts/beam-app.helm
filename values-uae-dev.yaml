@@ -23,5 +23,5 @@ global:
         - --checkpointingInterval=10000
       parallelism: 1
       upgradeMode: savepoint
-      state: running
+      state: suspended
       savepointTriggerNonce: 0
