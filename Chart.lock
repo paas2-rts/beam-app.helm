@@ -1,0 +1,6 @@
+dependencies:
+- name: flink-deploy-base
+  repository: https://paas2-rts.github.io/rts-helm-charts/
+  version: 1.0.0
+digest: sha256:8b6b9744311ef9490566d6e117b927c1bd210ceb98ac5efa2e6db9772e9d381a
+generated: "2022-03-29T15:57:43.266743+04:00"
